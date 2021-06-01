@@ -56,14 +56,14 @@ var flag=true;
 
     boton.addEventListener("click",function(){
         if(flag){
-            elemento.style.height="35%";
+            elemento.style.height="400px";
             boton.setAttribute("src","arriba.png");
 
 
             flag=false;
 
         }else if(flag==false){
-            elemento.style.height="4%";
+            elemento.style.height="50px";
             boton.setAttribute("src","abajo.png");
 
 
@@ -82,6 +82,7 @@ var flag=true;
  * @param {ruta de la imagen del QR} urlImg 
  */
 function setCodigoQr(idElemento,nameClass,nombreHospital="",urlImg=null){
+
     var elemento=document.getElementById(idElemento);
     var contenedorGeneral=document.createElement("div");
     var contenedorInfo=document.createElement("div");
@@ -89,6 +90,7 @@ function setCodigoQr(idElemento,nameClass,nombreHospital="",urlImg=null){
     var titulo=document.createElement("h1");
     var subtitulo=document.createElement("h2");
     var parrafo=document.createElement("p");
+    var parrafo2=document.createElement("p");
     var imagenQr=document.createElement("img");
 
     var clase=document.getElementsByClassName(nameClass);
@@ -108,14 +110,18 @@ function setCodigoQr(idElemento,nameClass,nombreHospital="",urlImg=null){
     subtitulo.innerHTML=nombreHospital;
     subtitulo.style.marginTop="-5px";
 
-    parrafo.innerHTML="Comparte este código para vincular a nuevas personas a tu organización";
+    parrafo.innerHTML="Comparte este código para vincular a nuevas";
+    parrafo.style.marginTop="30%";
     
+    parrafo2.innerHTML="personas a tu organización";
+    parrafo2.style.marginTop="-10%";
     imagenQr.setAttribute("src",urlImg);
 
 
     contenedorInfo.appendChild(titulo);
     contenedorInfo.appendChild(subtitulo);
     contenedorInfo.appendChild(parrafo);
+    contenedorInfo.appendChild(parrafo2);
     
     contenedorQr.appendChild(imagenQr);
 
@@ -130,7 +136,9 @@ function setCodigoQr(idElemento,nameClass,nombreHospital="",urlImg=null){
 }
 
 function setDataTable(idContenedorListaRegistro,idContenedorSinRegistros){
+
     var elemento=document.getElementById(idContenedorListaRegistro);
+    var tituloListaMedicos=document.getElementById("tituloListaMedicos");
     var elementoSinRegistros=document.getElementById(idContenedorSinRegistros);
     var contenedorDataTable=document.createElement("div");
 
@@ -148,7 +156,7 @@ function setDataTable(idContenedorListaRegistro,idContenedorSinRegistros){
     var telefono= document.createTextNode("Número de médico");
 
     contenedorDataTable.setAttribute("class","contenedorDataTable");
-
+    tituloListaMedicos.style.display="block";
 
     th1.appendChild(nombre);
     th2.appendChild(apellido);
