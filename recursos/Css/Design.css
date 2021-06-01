@@ -1,0 +1,194 @@
+*{
+    border: 0px;
+    margin: 0px;
+}
+.contenedor{
+    width: 95%;
+    height: 610px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 15px;
+    background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+    background-blend-mode: multiply;
+    overflow: auto;
+}
+ .contTitulo{
+     width: 50%;
+     height: 25px;
+     margin:auto;
+ }
+ .contTitulo h1{
+    text-align: center;
+    font-size: 25px;
+    color:#ffffff;
+ }
+ .barraInfoGeneral{
+     width: 47%;
+     height: 265px;
+     overflow: auto;
+     margin: auto;
+     margin-top: 20px;
+     margin-left: 1% ;
+     border-radius: 7px;
+     border-bottom: 1px solid #e9c4d0;
+    background-color: white;
+    float: left;
+
+ }
+ .contInfo{
+     width:47%;
+     height: 75px;
+     border: 1px solid #202020;
+     border-radius: 8px;
+     float:left;
+     margin-left:2%;
+     margin-top: 10px;
+     background-color:rgb(48, 48, 48);
+ }
+
+.graficaDatosAltas{
+    width: 47.5%;
+    height: 265px;
+    margin-left: 51%;
+    margin-top: 20px;
+    border-radius: 7px;
+    background-color: white;
+    overflow: auto;
+}
+.imageIcon{
+    width: 80%;
+    height: 70%;
+    margin-left: 7px;
+    margin-top: 10px;
+ 
+}
+.tHead{
+    background-color: #303030;
+    color:white;
+}
+ .icono{
+     width: 40%;
+     height: 100%;
+     border: 1px solid #d1d1d1;
+     background-color: rgb(146, 154, 230);
+     float: left;
+     border-radius: 8px;
+     
+ }
+ .titulo{
+    width: 60%;
+    height: 60%;
+    margin-left: 40%;
+    border-bottom: 1px solid #818181;
+    color: white;
+  
+ }
+ .titulo h1{
+    font-size: 17px;
+   
+    
+ }
+ .dato{
+    width: 60%;
+    height: 40%;
+    margin-left: 40%;
+    color: white;
+     
+     
+ }
+ .dato h1{
+    font-size: 17px;
+    text-align: center;
+ }
+
+ /*GRAFICAS*/
+
+
+ 
+.graficaPacientesDiarios{
+
+    width: 98%;
+    height: 250px;
+    border:1px solid rgb(255, 255, 255);
+    background-color: #ffffff;
+    border-radius: 7px;
+    margin-left: 1%;
+    margin-top: 30px;
+ 
+    
+
+}
+.vinculacionPacientes{
+    width: 47%;
+    height: 345px;
+    margin-left:1%;
+    margin-top: 15px;
+    border-radius: 7px;
+    background-color: #ffffff;
+    float: left;
+ }
+.vinculacionfamiliares{
+    width: 47%;
+    height: 345px;
+    margin-left:52%;
+    border-radius: 7px;
+    background-color: #ffffff;
+    margin-top: 15px;
+    
+    
+}
+
+/*----*/
+ 
+@media only screen and (max-width: 1350px) {
+   
+   
+    .titulo h1{
+        font-size: 13px;
+        height: 20px;
+        
+     }
+     .dato h1{
+        font-size: 15px;
+         
+     }
+
+} 
+@media only screen and (max-width: 414px) {
+    .barraInfoGeneral{
+     float: none;
+     width: 95%;
+     margin-left: 2.5%;
+    }
+    .contInfo{
+        width:45%;
+        margin-left:3.5%;
+      
+    }
+   
+    .graficaDatosAltas{
+        width: 95%;
+        margin-left:2.5% ;
+        
+        float:none;
+
+    }
+
+    .graficaPacientesDiarios{
+        width: 95%;
+        margin-left:2.5% ;
+    }
+
+    .vinculacionPacientes{
+        float:none;
+        width: 95%;
+        margin-left:2.5%;
+    }
+    .vinculacionfamiliares{
+
+        float:none;
+        width: 95%;
+        margin-left:2.5%;
+    }
+
+}

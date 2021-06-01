@@ -1,0 +1,251 @@
+.contenedorGeneral{
+width: 80%;
+height: 1300px;
+margin: auto;
+margin-top: 10px;
+/**border: 1px solid red;*/
+
+
+}
+
+.contenedorTitulo{
+width: 100%;
+height:2%;
+/*border: 1px solid red*/
+
+}
+.contenedorTitulo h1{
+    font-size: 15px;
+}
+.contenedorModulos{
+    width: 100%;
+    height: 11%;
+    /*border: 1px solid red;*/
+    border-bottom: 2px solid rgb(128, 128, 128);
+}
+
+.modulo{
+    width: 20%;
+    height: 62%;
+    margin-left: 3.5%;
+    margin-top: 2%;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px rgb(161, 161, 161);
+    float: left;
+}
+.moduloTitulo{
+    width: 100%;
+    height: 35px;
+    /*border: 1px solid red;*/
+    margin-top: 5px;
+}
+.moduloTitulo h1{
+    font-size: 17px;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+.moduloContador{
+    width: 100%;
+    height: 35px;
+    /*border: 1px solid red;*/
+    margin-top: 5px;
+    overflow: auto;
+}
+.moduloContador h1{
+    font-size: 14px;
+    text-align: center;
+    color: black;
+}
+
+.contGeneralQr{
+    width: 30%;
+    height: 95%;
+    margin-left: 70%;
+    border: 1px solid rgb(119, 119, 119);
+    border-radius: 10px;
+
+}
+.contenedorInfo{
+width: 50%;
+height: 100%;
+/*border: 1px solid rgb(119, 119, 119);*/
+float: left;
+overflow: auto;
+
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.contenedorInfo h1{
+font-size: 11px;
+text-align: center;
+margin-top: 5px;
+}
+.contenedorInfo h2{
+    font-size: 10px;
+    text-align: center;
+}
+.contenedorInfo p{
+    font-size: 9px;
+    text-align: center;
+    margin-top: 30px;
+
+}
+ 
+.contenedorQr{
+width: 50%;
+height: 100%;
+margin-left: 50%;
+/*border: 1px solid red;*/
+
+}
+.contenedorQr img{
+width: 60%;
+height: 60%;
+margin-top: 15%;
+margin-left: 20%;
+}
+
+.contenedorListaMedicos{
+    width: 100%;
+    height:30% ;
+    margin-top: 15px;
+    border-radius: 14px;
+    border: 2px solid rgb(161, 161, 161);
+}
+.contenedorTituloListaMedicos{
+    width: 95%;
+    height: 15%;
+    margin: auto;
+    /*border: 1px solid red;*/
+
+}
+.contenedorTituloListaMedicos h1{
+    font-size: 17px;
+    color: #42ADB9;
+}
+.contenedorTituloListaMedicos h2{
+    font-size: 14px;
+    margin-left: 2%;
+}
+
+
+.contenedorSinRegistros{
+    width: 40%;
+    height: 75%;
+    margin: auto;
+    margin-top: 4%;
+   /* border: 2px solid rgb(161, 161, 161);*/
+}
+.contenedorLogo{
+    width: 90%;
+    height: 50%;
+    /*border: 2px solid rgb(161, 161, 161);*/
+    margin:auto;
+    margin-top: 10px;
+
+}
+.contenedorLogo img{
+    width: 50%;
+    margin-left: 25%;
+  
+     
+}
+
+.contenedorTexto{
+    width: 100%;
+    height: 20%;
+   /* border: 2px solid rgb(161, 161, 161);*/
+    margin:auto;
+    margin-top:10px;
+}
+.contenedorTexto p{
+    font-size: 11px;
+    text-align: center;
+
+}
+.contenedorTexto p:nth-child(2){
+margin-top: -15px;
+}
+.botonAgregarMedicos{
+    width: 80%;
+    height: 11%;
+    margin: auto;
+    margin-top: 10px;
+    border: 2px solid rgb(226, 74, 74);
+    border-radius: 15px;
+    cursor: pointer;
+}
+.botonAgregarMedicos:hover{
+    background-color: rgb(255, 235, 235);
+}
+.botonAgregarMedicos h1{
+    font-size: 11px;
+    text-align: center;    
+    margin-top: 7px;
+    color: rgb(226, 74, 74);
+}
+.contenedorRegistroPlantilla{
+    width: 100%;
+    height: 4%;
+    border: 2px solid rgb(161, 161, 161);
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 14px;
+}
+.contenedorRegistroPlantilla h1{
+font-size: 15px;
+margin-left: 10px;
+margin-top: 13px;
+float: left;
+}
+.contenedorRegistroPlantilla img{
+    width: 25px;
+    float: right;
+    margin-right: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+.contenedorDataTable{
+    width: 95%;
+    height: 85%;
+    margin: auto;
+    /*border: 1px solid red;*/
+    overflow: auto;
+}
+
+@media only screen and (max-width: 850px) {
+    .moduloTitulo h1{
+        font-size: 14px;
+    }
+
+    .moduloContador h1{
+        font-size: 12px;
+    }
+
+
+    .contenedorInfo h1{
+        font-size: 10px;
+       
+        }
+    .contenedorInfo h2{
+        font-size: 9px;
+          
+    }
+    .contenedorInfo p{
+        font-size: 8.5px;
+        
+    }
+ 
+    .contenedorQr img{
+        width: 60%;
+        height: 50%;
+        margin-top: 30%;
+       
+    }
+
+
+}
