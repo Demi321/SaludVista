@@ -56,7 +56,7 @@ var flag=true;
 
     boton.addEventListener("click",function(){
         if(flag){
-            elemento.style.height="400px";
+            elemento.style.height="500px";
             boton.setAttribute("src","arriba.png");
 
 
@@ -95,26 +95,24 @@ function setCodigoQr(idElemento,nameClass,nombreHospital="",urlImg=null){
 
     var clase=document.getElementsByClassName(nameClass);
 
-    for(var i=0;i<clase.length;i++){
-        clase[i].style.width="15%";
-        clase[i].style.marginLeft="2%";
-
-    }
+    
 
     contenedorGeneral.setAttribute("class","contGeneralQr");
+    contenedorGeneral.setAttribute("id","idContenedorGeneral");
     contenedorInfo.setAttribute("class","contenedorInfo");
     contenedorQr.setAttribute("class","contenedorQr");
     
 
     titulo.innerHTML="Código de hospital";
     subtitulo.innerHTML=nombreHospital;
-    subtitulo.style.marginTop="-5px";
+   
 
     parrafo.innerHTML="Comparte este código para vincular a nuevas";
-    parrafo.style.marginTop="30%";
-    
+    parrafo.setAttribute("id","p1");
+    parrafo.style.marginTop="25%";
+
     parrafo2.innerHTML="personas a tu organización";
-    parrafo2.style.marginTop="-10%";
+    parrafo2.style.marginTop="-5%";
     imagenQr.setAttribute("src",urlImg);
 
 
@@ -131,6 +129,26 @@ function setCodigoQr(idElemento,nameClass,nombreHospital="",urlImg=null){
     contenedorGeneral.appendChild(contenedorQr);
     elemento.appendChild(contenedorGeneral);
 
+    var contGerneralQr=document.getElementById("idContenedorGeneral");
+    if(screen.width<=550){
+       
+        contGerneralQr.style.display="none";
+        for(var i=0;i<clase.length;i++){
+            clase[i].style.width="45%";
+            clase[i].style.marginLeft="3.5%";
+            
+    
+            }
+    }else{
+        contGerneralQr.style.display="display";
+        for(var i=0;i<clase.length;i++){
+        
+        clase[i].style.width="15%";
+        clase[i].style.marginLeft="2%";
+        clase[i].style.fontSize="12px";
+
+        }
+    }
 
     
 }
@@ -185,7 +203,19 @@ function setDataTable(idContenedorListaRegistro,idContenedorSinRegistros){
     contenedorDataTable.appendChild(table);
     elemento.appendChild(contenedorDataTable);
     var dataTable=$('#tablaRegistros').DataTable();
-    try{
+
+    for(var i=0;i<50;i++){
+
+        dataTable.row.add([
+
+            "David Jimenez Santiago",
+            "davidjim97j@gmail.com",
+            "5821251425",
+            "75214585"
+
+        ]).draw();
+    }
+   /* try{
 
     if(directorio_medico!=null){
         for(var i=0;i<directorio_medico.length;i++){
@@ -203,7 +233,7 @@ function setDataTable(idContenedorListaRegistro,idContenedorSinRegistros){
     
     }catch(e){
         console.log("la variable 'directorio_medico' no se encuentra");
-    }
+    }*/
  
 
  
