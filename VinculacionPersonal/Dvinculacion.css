@@ -1,119 +1,181 @@
 .contenedorGeneral{
-width:70%;
+width:100%;
 margin: auto;
 margin-top: 10px;
 height: auto;
-/*border: 1px solid red;*/
-
-
-}
-
-.contenedorTitulo{
-width: 100%;
-height:2%;
-/*border: 1px solid red*/
+border: 1px solid red;
 
 }
-.contenedorTitulo h1{
-    font-size: 15px;
+
+ .card{
+    border-radius: 25px;
 }
+ input{
+    border-radius: 10px;
+}
+ 
+.medidas{
+width: 60%;
+ 
+}
+
+/*MODULOS CON BOOTSTRAP*/
 .contenedorModulos{
-    width: 100%;
-    height: 140px;
-    /*border: 1px solid red;*/
-    border-bottom: 2px solid rgb(128, 128, 128);
-}
+    height: 160px;
+    border-bottom: 2px solid rgb(128, 128, 128); 
 
-.modulo{
-    width: 23.7%;
-    height: 55%;
-    margin-left: 1%;
-    margin-top: 2%;
+}
+.tituloGeneralModulos{
+  
+    height: 40px;
+}
+.sizeRow{
+    height: 100%;
+}
+.coulumnSizeModulo{
+            
+    height: 50%;
     border-radius: 4px;
     box-shadow: 2px 2px 5px rgb(161, 161, 161);
-    float: left;
+    margin-left: 10px;
+    margin-top: 1%;
 }
- 
-.moduloTitulo{
-    width: 100%;
-    height: 35px;
-    /*border: 1px solid red;*/
-    margin-top: 5px;
-}
-.moduloTitulo h1{
+.coulumnSizeModulo h1{
     font-size: 14px;
     text-align: center;
-    font-weight: bold;
-    color: black;
+    margin-top: 10px;
 }
-.moduloContador{
-    width: 100%;
-    height: 35px;
-    /*border: 1px solid red;*/
-    margin-top: 5px;
-    overflow: auto;
-}
-.moduloContador h1{
+.coulumnSizeModulo h2{
     font-size: 12px;
     text-align: center;
-    color: black;
+    margin-top: 15px;
+    
 }
-
-.contGeneralQr{
-    width: 30%;
-    height: 87%;
-    margin-left: 70%;
-    border: 1px solid rgb(119, 119, 119);
-    border-radius: 10px;
-
+/*ELEMENTOS QR*/
+ 
+.divisionColumna{
+   
 }
-.contenedorInfo{
-width: 60%;
-height: 100%;
-/*border: 1px solid rgb(119, 119, 119);*/
-float: left;
-overflow: auto;
+.divisionColumna img{
+    width: 70px;
+    margin-left: -17%;
+    margin-top: 20%;
 
 }
-::-webkit-scrollbar {
-    display: none;
+.tituloHospital{
+    font-size: 12px;
+    
+
 }
-.contenedorInfo h1{
-font-size: 11px;
-text-align: center;
-margin-top: 5px;
-color: black;
-font-weight: bold;
-}
-.contenedorInfo h2{
+.subtituloHospital{
     font-size: 10px;
-    text-align: center;
-    color: black;
-    font-weight: bold;
-}
-.contenedorInfo p{
-    font-size: 8px;
-    text-align: center;
-    color: black;
-    text-align: left;
-    margin-left: 10%;
-}
- 
- 
-.contenedorQr{
-width: 30%;
-height: 100%;
-margin-left: 65%;
-/*border: 1px solid red;*/
 
 }
-.contenedorQr img{
-width: 80%;
-margin-top: 20%;
-margin-left: 5%;
+.textoHospital{
+    margin-top: 1px;
+    font-size: 7px;
+   
+    margin-top: 30px;
+
+}   
+/*----LISTA MEDIOCOS BOOTSTRAP*/
+.sizeContenedorListaMedicos{
+    
+    height:auto;
+    margin-top: 15px;
+    border: 2px solid rgb(128, 128, 128);
+    border-radius: 17px;
+     
  
 }
+.sizePlantillaMedicos{
+    height:70px;
+    margin-top: 15px;
+    border: 2px solid rgb(128, 128, 128);
+    border-radius: 17px;
+ 
 
+}
+.row-100{
+    height: 100%;
+    
+}
+.colSinRegistros{
+  
+    height: 60%;
+    margin: auto;
+     
+}
+.contTituloListMed{
+  
+}
+.contTituloListMed h1{
+    font-size: 15px;
+    color: #42ADB9;
+    margin-left: 5%;
+}
+.contTituloListMed h2{
+    font-size: 14px;
+    margin-left: 5%;
+}
+
+.colSinRegistros img{
+width:50%;
+ 
+margin-left: 27%;
+}
+.rowParrafo{
+   
+    height: 20px;
+    text-align: center;
+    font-size: 14px;
+
+}
+.rowBotAddMed{
+ 
+    height: 50px;
+
+}
+.botAddMed{
+    margin-left: 25%;
+    width: 70%;
+    height: 70%;
+    font-size: 12px;
+    border: none;
+    border: 1px solid #f03838;
+    border-radius: 14px;
+    background-color: white;
+    color: rgb(255, 61, 61);
+    margin-left: 15%;
+
+}
+.botAddMed:hover{
+    background-color: rgb(255, 212, 212);
+}
+
+/*elementos contenedor formulario*/
+
+
+.containerFormulario{
+    /*border: 1px solid red;*/
+    height: auto;/*60px*/
+   
+    border: 2px solid rgb(128, 128, 128);
+    border-radius: 17px;
+}
+.title-Img{
+    /*border: 1px solid red;*/
+    font-size: 19px;
+}
+.title-Img img{
+    width: 25px;
+    margin-left:75%;
+}
+.rowTituloPlantillaM{
+    /*border: 1px solid red;*/
+   
+}
+ 
 .contenedorListaMedicos{
     width: 100%;
     height:500px;
@@ -227,15 +289,52 @@ float: left;
      
 }
 
-
 .contenedorDataTable{
     width: 95%;
     height: 82%;
+    
     margin: auto;
     /*border: 1px solid red;*/
     overflow: auto;
 }
 
+ 
+.sizeContQr{
+    width: 250px;
+     height: 110px;
+     border: 1px solid black;
+     border-radius: 10px;
+     margin-top: -15px;
+     display: none;
+  }
+
+@media only screen and (max-width: 800px){
+    .rowParrafo{
+   
+        height: 20px;
+        text-align: center;
+        font-size: 9px;
+    
+    }
+    
+    .botAddMed{
+      
+        width: 100%;
+        margin-left: 0%;
+        font-size: 9px;
+    
+    }
+    .title-Img img{
+        width: 25px;
+        margin-left:45%;
+    }
+}
+@media only screen and (max-width: 500px){
+.coulumnSizeModulo{
+    margin-left: 1%;
+}
+}
+/*
 @media only screen and (max-width: 1100px) {
     .moduloTitulo h1{
         font-size: 14px;
@@ -266,8 +365,7 @@ float: left;
        
     }
      
-    /**/
-       
+ 
 .contenedorSinRegistros{
     width: 70%;
     height: 70%;
@@ -371,7 +469,7 @@ float: left;
     
     }
  
-    /**/
+ 
     
 .contenedorSinRegistros{
     width: 100%;
@@ -395,3 +493,4 @@ float: left;
  
  
 }
+*/

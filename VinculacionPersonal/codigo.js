@@ -1,48 +1,4 @@
-
-/**
- * 
- * @param {id del elemento donde se agregaran losmodulos} idElemento 
- * @param {color del modulo} colorModulo 
- * @param {Titulo del modulo} tituloModulo 
- * @param {numero de medicos} contador 
- */
-function agregarModulo(idElemento,colorModulo="white",tituloModulo="",contador=0){
  
-    var elemento=document.getElementById(idElemento);
-    var divModulo=document.createElement("div");    
-    var divTitulo=document.createElement("div");
-    var divContador=document.createElement("div");
-    var titulo=document.createElement("h1");
-    var cantidadMedicos=document.createElement("h1");
-    
-
-
-    divModulo.setAttribute("class","modulo");
-    divModulo.style.backgroundColor=colorModulo;
-
-    divTitulo.setAttribute("class","moduloTitulo");
-    titulo.innerHTML=tituloModulo;
-
-    cantidadMedicos.innerHTML=contador+" Médicos";
-
-    divContador.setAttribute("class","moduloContador");
-
-    
-
-
-    divTitulo.appendChild(titulo);
-    divContador.appendChild(cantidadMedicos);
-
-    divModulo.appendChild(divTitulo);
-    divModulo.appendChild(divContador);
-    elemento.appendChild(divModulo);
-
-    
-
-
-
-}
-
 /**
  * 
  * @param {id del elemento el cual se agrandara} idElemento 
@@ -53,19 +9,22 @@ function resize(idElemento,idBotonImg){
 var flag=true;
     var elemento=document.getElementById(idElemento);
     var boton=document.getElementById(idBotonImg);
+    var contFormularioMed=document.getElementById("contFormularioMed");
 
     boton.addEventListener("click",function(){
         if(flag){
-            elemento.style.height="500px";
+            elemento.style.height="auto";
             boton.setAttribute("src","arriba.png");
+            contFormularioMed.style.display="block";
 
 
             flag=false;
 
         }else if(flag==false){
-            elemento.style.height="50px";
+            contFormularioMed.style.display="none";
+            elemento.style.height="70px";
             boton.setAttribute("src","abajo.png");
-
+         
 
             flag=true;
         }
@@ -81,82 +40,12 @@ var flag=true;
  * @param {nombre del hospital correspondiente} nombreHospital 
  * @param {ruta de la imagen del QR} urlImg 
  */
-function setCodigoQr(idElemento,nameClass,nombreHospital="",urlImg=null){
-
-    var elemento=document.getElementById(idElemento);
-    var contenedorGeneral=document.createElement("div");
-    var contenedorInfo=document.createElement("div");
-    var contenedorQr=document.createElement("div");
-    var titulo=document.createElement("h1");
-    var subtitulo=document.createElement("h2");
-    var parrafo=document.createElement("p");
-    var parrafo2=document.createElement("p");
-    var imagenQr=document.createElement("img");
-
-    var clase=document.getElementsByClassName(nameClass);
-
-    
-
-    contenedorGeneral.setAttribute("class","contGeneralQr");
-    contenedorGeneral.setAttribute("id","idContenedorGeneral");
-    contenedorInfo.setAttribute("class","contenedorInfo");
-    contenedorQr.setAttribute("class","contenedorQr");
-    
-
-    titulo.innerHTML="Código de hospital";
-    subtitulo.innerHTML=nombreHospital;
-   
-
-    parrafo.innerHTML="Comparte este código para vincular a nuevas";
-    parrafo.setAttribute("id","p1");
-    parrafo.style.marginTop="25%";
-
-    parrafo2.innerHTML="personas a tu organización";
-    parrafo2.style.marginTop="-5%";
-    imagenQr.setAttribute("src",urlImg);
-
-
-    contenedorInfo.appendChild(titulo);
-    contenedorInfo.appendChild(subtitulo);
-    contenedorInfo.appendChild(parrafo);
-    contenedorInfo.appendChild(parrafo2);
-    
-    contenedorQr.appendChild(imagenQr);
-
-
-
-    contenedorGeneral.appendChild(contenedorInfo);
-    contenedorGeneral.appendChild(contenedorQr);
-    elemento.appendChild(contenedorGeneral);
-
-    var contGerneralQr=document.getElementById("idContenedorGeneral");
-    if(screen.width<=550){
-       
-        contGerneralQr.style.display="none";
-        for(var i=0;i<clase.length;i++){
-            clase[i].style.width="45%";
-            clase[i].style.marginLeft="3.5%";
-            
-    
-            }
-    }else{
-        contGerneralQr.style.display="display";
-        for(var i=0;i<clase.length;i++){
-        
-        clase[i].style.width="15%";
-        clase[i].style.marginLeft="2%";
-        clase[i].style.fontSize="12px";
-
-        }
-    }
-
-    
-}
+ 
 
 function setDataTable(idContenedorListaRegistro,idContenedorSinRegistros){
 
     var elemento=document.getElementById(idContenedorListaRegistro);
-    var tituloListaMedicos=document.getElementById("tituloListaMedicos");
+    //var contFormulario=document.getElementById("contListaMedicos");
     var elementoSinRegistros=document.getElementById(idContenedorSinRegistros);
     var contenedorDataTable=document.createElement("div");
 
@@ -170,11 +59,11 @@ function setDataTable(idContenedorListaRegistro,idContenedorSinRegistros){
     var tr=document.createElement("tr");
     var nombre= document.createTextNode("Nombre");
     var apellido= document.createTextNode("Correo Electrónico");
-    var correo= document.createTextNode("Télefono");
+    var correo= document.createTextNode("Teléfono");
     var telefono= document.createTextNode("Número de médico");
 
     contenedorDataTable.setAttribute("class","contenedorDataTable");
-    tituloListaMedicos.style.display="block";
+   // contFormulario.style.height="auto";
 
     th1.appendChild(nombre);
     th2.appendChild(apellido);
@@ -202,8 +91,12 @@ function setDataTable(idContenedorListaRegistro,idContenedorSinRegistros){
 
     contenedorDataTable.appendChild(table);
     elemento.appendChild(contenedorDataTable);
-    var dataTable=$('#tablaRegistros').DataTable();
+    var dataTable=$('#tablaRegistros').DataTable({
+        pageLength : 5,
+        lengthMenu: [[5, 10, 20, -1], [5, 10, 20, 'Todos']]
+    });
 
+    $(".dataTables_filter").addClass("float-right");
     for(var i=0;i<50;i++){
 
         dataTable.row.add([
@@ -236,7 +129,8 @@ function setDataTable(idContenedorListaRegistro,idContenedorSinRegistros){
     }*/
  
 
- 
+   
     
 
 }
+
