@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+<style>
+    .padre{
+        border: 1px solid red;
+        background-color: black;
+        width: 50%;
+        height: 400px;
+        margin: auto;
+        position: relative;
+        left:20px;
+       
+    }
+    .hijo{
+        border: 1px solid blue;
+        width: 10%;
+        height: 100px;
+        margin: auto;
+        background-color: aqua;
+        position:absolute;
+        top: -10px;
+        left: 20px;
+        z-index: -1;
+    
+    }
+    .padre2{
+        border: 1px solid #ff0000;
+        
+        width: 50%;
+        height: 400px;
+        margin: auto;
+        margin-top: 20px;
+        position: relative;
+        left:20px;
+       
+    }
+    .hijo2{
+        border: 1px solid blue;
+        width: 10%;
+        height: 100px;
+        margin: auto;
+        position:fixed;
+        top: -10px;
+        left: 20px;
+        z-index: -1;
+    
+    }
+    p{
+        
+    }
+</style>
+<!--
+    •static: no reconoce top right button left y es el que esta por defecto
+    •relative.si reconoce top, r,b y l, a partir de la posición del elemento
+    •absolute: si reconoce trbl a partir de la posicion del paddre, sale del flujo natural de la maquetacion 
+                para usar esta posicion es necesario que el padre tenga una posicion relativa
+    •fixed: si reconoce trbl, se sale del flujo natural de la maquetación y toma las medidas desde el viewposrt 
+    (area visual o ventana)
+    toma en cuenta el viewport o l aventana como referencia no importando si esta dentro de un contenedor padre hijo etc
+    toma la referecia de la ventana
+    •sticky: es la mas nueva, permite usar el efecto cuando se hace un sroll el menu se queda pegado en la parte suoperior
+    
+    Z-INDEX: esta propiedad ayuda a posicionar a a los contenedores, por ejemplo si le damos un numero negativo coni -1 lo posiciona
+    una capa por detas, si es -2 dos capas por detras si es positivo lo posiciona n capas por delate y asi sucesivamente
+    pero para usar z-index es necesario que el padre tenga un  relative, y el hijo un relative o absolute al cual se le aplicara el z-index
+    de lo contrario no funcionara. z-index va de - 9999 a 9999 capas posibles
+
+-->
+
+
+<div class="padre">
+
+    <div class="hijo">
+
+
+    </div>
+    
+
+</div>
+
+
+
+<div class="padre2">
+
+    <div class="hijo2">
+
+        <p>Este es un texto</p>
+    </div>
+    
+
+</div>
+
+
+
+
+
+</body>
+</html>

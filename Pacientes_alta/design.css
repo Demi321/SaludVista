@@ -1,0 +1,100 @@
+td.details-control {
+    background: url('abajo.png') no-repeat center center;
+    background-size: 20px;
+    cursor: pointer;
+}
+tr.shown td.details-control {
+    background: url('arriba.png') no-repeat center center;
+    background-size: 20px;
+}
+
+.contenedorGnl{
+
+    width: 95%;
+    height:auto;
+    border: 2px solid rgb(128, 128, 128);
+    border-radius: 17px;
+    overflow: auto;
+
+}
+.rowTituloGrl{
+    /*border: 1px solid red;*/
+   
+}
+.rowTituloGrl h1{
+    text-align: center;
+    font-size: 30px;
+    width: 100%;
+}
+
+
+.contSinDatos{
+    height: 700px;
+}
+.sinDatos{
+   
+    width: 40%;
+    height: 30%;
+    margin: auto;
+}
+ .fas{
+     margin-left:35%;
+ }
+.sinDatos img{
+    width:50%;
+  /*  border: 1px solid red;*/
+    margin-left: 26%;
+}
+.sinDatos p{
+    font-size: 20px;
+    text-align: center;
+}
+
+/*DataTable*/
+.dataTableAltas{
+    /*border:1px solid red;*/
+    width: 60%;
+    height:auto;
+    display: none;
+    margin-top: 40px;
+
+}
+
+.fecha{
+    background-color: rgb(255, 254, 218);
+}
+.hora{
+    background-color: rgb(224, 235, 252);
+}
+.estado{
+    background-color: rgb(255, 218, 204);
+}
+.diagnostico{
+    background-color: rgb(231, 255, 233);
+}
+.tdBorder{
+    border: 1px solid rgb(199, 199, 199);
+}
+@media only screen and (max-width:1000px){
+    .sinDatos{
+ 
+    width:80%;
+
+    }
+    .sinDatos img{
+  
+        width:40%;
+    }
+}
+@media only screen and (max-width:500px){
+    .sinDatos{
+ 
+    width:90%;
+
+    }
+    .sinDatos img{
+    
+        width:50%;
+        margin-left: 25%;
+    }
+}
