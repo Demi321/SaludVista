@@ -7,9 +7,6 @@ function showDataTable(){
     var dataTable=document.getElementById("idContDataTable");
     var sinRegistros=document.getElementById("idContSinDatos");
     
-    dataTable.style.display="block";
-    sinRegistros.style.display="none";
- 
 	var datos=[];  
    
     if(typeof solicitudes !=="undefined"){
@@ -32,16 +29,29 @@ function showDataTable(){
     $.post("https://salud.claro360.com/plataforma360_dev/API/plataforma360/medico/obtener_diagnostico_paciente");
   
     //DATOS DE PRUEBA
-    for(var i=0;i<30;i++)
-    datos[i]={"nombre":"Karina Sánchez Gonzalez","correo":"diana@gmail.com" ,"telefono":"5825121425","estado": "estable","diagnostico":"al 100","id":24};
+    for(var i=0;i<30;i++){
+    datos[i]={"nombre":"Karina Sánchez Gonzalez"+i,"correo":"diana@gmail.com" ,"telefono":"5825121425","estado": "estable","diagnostico":"al 100","boton":"<i class='fas fa-phone phoneIcon'></i>","id":24};
+      
+    }
    
 
 
     if(datos.length!=0){
+        dataTable.style.display="block";
+        sinRegistros.style.display="none";
 
     var dataTable=$('#idDataTableAltas').DataTable(
         {
+            dom: 'Bfrtip',
+            buttons: [
+                
+                {extend:'excel',title:"datos",className:"btn btn-success btn-sm",exportOptions: {columns: [1,2,3 ]} },
+                {extend:'pdf',title:"datos",className:"btn btn-danger btn-sm",exportOptions: {columns: [1,2,3 ]}},
+                {extend:'csv',title:"datos",className:"btn btn-primary btn-sm",exportOptions: {columns: [1,2,3 ]}},
             
+            
+            ],
+           
             data:datos,
             "columns": [
                 {
@@ -52,7 +62,8 @@ function showDataTable(){
                 },
                 { "data": "nombre"},
                 { "data": "correo" },
-                { "data": "telefono"} 
+                { "data": "telefono"} ,
+                { "data": "boton"} 
             ],
             "order": [[1, 'asc']]
         },
@@ -60,89 +71,87 @@ function showDataTable(){
 
     );
 
- 
 
-    //Evento click 
+   let contador=0;
     $('#idDataTableAltas tbody').on('click', 'td.details-control', function () {
         var tr = $(this).parents('tr');
         var row = dataTable.row( tr );
+
  
+           
         if ( row.child.isShown() ) {
             // This row is already open - close it
             row.child.hide();
             tr.removeClass('shown');
-          
+            
         }
         else {
-            // Open this row
-            console.log();
+      
+   
+            var diaG="Contrary to popular belief";
 
-          /*  var datos2=[];
-            var aux2='<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;overflow:auto;">';
-            var fecha="<tr class='fecha'><td>Fecha</td>";
-            var hora="<tr class='hora'><td>Hora</td>";
-            var estado="<tr class='estado'><td>Estado</td>";
-            var diagnostico="<tr class='diagnostico'><td>Diagnostico</td>";
+       
 
-            for(var i=0;i<6;i++){
-                datos2[i]= {"Fecha":"28/11/2020","Hora":"20:58","Estado":"Grave","Diagnostico":"mal"};
- 
-            }
-           
-            for(var i=0;i<datos2.length;i++){
-                fecha=fecha+"<td class='tdBorder'>"+datos2[i].Fecha+"</td>";
-                hora=hora+"<td class='tdBorder'>"+datos2[i].Hora+"</td>";
-                estado=estado+"<td class='tdBorder'>"+datos2[i].Estado+"</td>";
-                diagnostico=diagnostico+"<td class='tdBorder'>"+datos2[i].Diagnostico+"</td>";
-
-            }
-
-
-            fecha=fecha+"</tr>";
-            hora=hora+"</tr>";
-            estado=estado+"</tr>";
-            diagnostico=diagnostico+"</tr>";
-
-            aux2=aux2+fecha+hora+estado+diagnostico+"</table>";*/
-            
-            
-            ////
+            //class='tablaDetallesThead'
             var datos2=[];
-            var aux2='<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;overflow:auto;">';
-            var fecha="<tr class='fecha'><td>Fecha</td>";
-            var hora="<tr class='hora'><td>Hora</td>";
-            var estado="<tr class='estado'><td>Estado</td>";
-            var diagnostico="<tr class='diagnostico'><td>Diagnostico</td>";
+            var aux2='<table style=" width: 100%;" id="idTablaDetalles'+contador+'">';
 
+
+         
+            var campos="<thead><tr><td class='camposT'>Fecha</td><td class='camposT'>Hora</td><td class='camposT'>Estado</td><td class='camposT'>Diagnóstico</td></tr></thead>";
+            var datosTabla="";
+            
             for(var i=0;i<6;i++){
-                datos2[i]= {"Fecha":"28/11/2020","Hora":"20:58","Estado":"Grave","Diagnostico":"mal"};
- 
-            }
-           
+                datos2[i]= {"Fecha":"28/11/2020","Hora":"20:58","Estado":"Grave","Diagnostico":diaG};
+               }
+               
+             
+
+               aux2=aux2+campos;
+
             for(var i=0;i<datos2.length;i++){
-                fecha=fecha+"<td class='tdBorder'>"+datos2[i].Fecha+"</td>";
-                hora=hora+"<td class='tdBorder'>"+datos2[i].Hora+"</td>";
-                estado=estado+"<td class='tdBorder'>"+datos2[i].Estado+"</td>";
-                diagnostico=diagnostico+"<td class='tdBorder'>"+datos2[i].Diagnostico+"</td>";
-
+ 
+                datosTabla=datosTabla+"<tr><td class='camposT-td' >"+datos2[i].Fecha+"</td>"+"<td class='camposT-td'  >"+datos2[i].Hora+"</td>"+"<td class='camposT-td' >"+datos2[i].Estado+"</td>"+"<td class='camposT-td' style='text-align: center;'>"+datos2[i].Diagnostico+"</td></tr>";
+                aux2=aux2+datosTabla;
+                datosTabla="";
+               
+               
             }
-
-
-            fecha=fecha+"</tr>";
-            hora=hora+"</tr>";
-            estado=estado+"</tr>";
-            diagnostico=diagnostico+"</tr>";
-
-            aux2=aux2+fecha+hora+estado+diagnostico+"</table>";
-
-
-            ////
+          
+            aux2=aux2+"</table>";
+            
+            
 
  
             row.child( aux2 ).show();
             tr.addClass('shown');
 
+            let fileName="Diagnostico-"+row.data().nombre+"_Correo-"+row.data().correo+"_Telefono-"+row.data().telefono;
+
+            
+
+            $('#idTablaDetalles'+contador).DataTable( {
+                dom: 'Bfrtip',
+                buttons: [
+                  
+                    {extend:'excel',title:fileName,className:"btn btn-success btn-sm"},
+                    {extend:'pdf',title:fileName,className:"btn btn-danger btn-sm"},
+                    {extend:'csv',title:fileName,className:"btn btn-primary btn-sm"}
+                    
+                ]
+            } );
+            
+            for(var i=0;i<3;i++)
+            $('#idTablaDetalles'+contador).find("thead td:eq("+i+")").css({
+                "width":"10%"
+            });
+            $(".pacientes_alta .dataTables_wrapper .dt-button").removeClass("dt-button");
+
+            contador++;
+            
+
         }
+ 
     } );
 
 
@@ -156,29 +165,8 @@ function showDataTable(){
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
+ 
 function setDataTable(idContenedorListaRegistro,idContenedorSinRegistros){
 
     var elemento=document.getElementById(idContenedorListaRegistro);
@@ -274,3 +262,4 @@ function setDataTable(idContenedorListaRegistro,idContenedorSinRegistros){
  
 
  
+

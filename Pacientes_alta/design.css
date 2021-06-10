@@ -38,7 +38,10 @@ tr.shown td.details-control {
     margin: auto;
 }
  .fas{
-     margin-left:35%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+     
  }
 .sinDatos img{
     width:50%;
@@ -57,23 +60,38 @@ tr.shown td.details-control {
     height:auto;
     display: none;
     margin-top: 40px;
+    
+}
+.botonExcel{
+    color: white;
+}
+.camposT{
+    background-color: rgb(218, 216, 216);
+    border: 1px solid rgb(177, 177, 177);
+}
+.camposT-td{
+    background-color: rgb(243, 242, 242);
+    border: 1px solid rgb(177, 177, 177);
+}
+table td{
+text-align: center;   
 
 }
+table th{
+    text-align: center;
+}
 
-.fecha{
-    background-color: rgb(255, 254, 218);
+.tablaDetalles{
+
+} 
+
+.tablaDetallesThead{
+    display: none;
 }
-.hora{
-    background-color: rgb(224, 235, 252);
-}
-.estado{
-    background-color: rgb(255, 218, 204);
-}
-.diagnostico{
-    background-color: rgb(231, 255, 233);
-}
-.tdBorder{
-    border: 1px solid rgb(199, 199, 199);
+
+.phoneIcon{
+margin: auto;
+cursor: pointer;
 }
 @media only screen and (max-width:1000px){
     .sinDatos{

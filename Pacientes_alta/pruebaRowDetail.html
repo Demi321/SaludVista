@@ -61,7 +61,7 @@ tr.shown td.details-control {
         /* Formatting function for row details - modify as you need */
 function format ( d ) {
     // `d` is the original data object for the row
-    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
+    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px; id="idTablaDetalles" ">'+
         '<tr>'+
             '<td>Full name:</td>'+
             '<td>'+d.name+'</td>'+
@@ -124,11 +124,19 @@ $(document).ready(function() {
             // Open this row
             row.child( format(row.data()) ).show();
             tr.addClass('shown');
+           
+           
+           $t=$("#idTablaDetalles");
+            
+            alert($t);
+       
+            
+
         }
     } );
 } );
 
-
     </script>
+ 
 </body>
 </html>
