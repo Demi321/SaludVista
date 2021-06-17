@@ -37,9 +37,13 @@
     </style>
         
 
-    
 
-    <div class="container contenedorModulos"> 
+
+
+
+
+
+    <div class="container contenedorModulos" > 
 
         <div class="row" >
             <div class="col tituloGeneralModulos">
@@ -246,13 +250,18 @@
 </div>  
 
 
-
+<button id="bPdf" onclick="pdf()">PDF</button>
 
 <div class="container  mt-4" style="height: 40px;">
 
 </div>
 
   
+
+
+
+
+ 
 
  
 
@@ -264,7 +273,7 @@
         <script type="text/javascript" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
         <script type="text/javascript" src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
         
-
+        <script type="text/javascript" src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
 
     
         <script src="codigo.js"></script>
@@ -278,6 +287,20 @@
             //setCodigoQr("idCodigoQr");
             setDataTable("contListaMedicos","idColSinRegistros");
              
+
+
+            function pdf(){
+ 
+  var contenedor=document.getElementById("perfilLaboral");
+ 
+html2pdf().from(contenedor).save();
+ 
+ 
+ 
+}
+
+
+
         </script>
 
      
