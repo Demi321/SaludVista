@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+    <script src="https://kit.fontawesome.com/741e202e01.js" crossorigin="anonymous"></script>
+
+    
+    <link rel="stylesheet" href="diseno.css">
+
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <!--PERFIL-->
+
+<div class="container contenedorPrincipal"   id="tabs" >
+
+        <ul>
+            <li><a href="#perfil">Perfil</a></li>
+            <li><a href="#perfilSalud">Perfil Salud</a></li>
+            <li><a href="#perfilLaboral">Perfil Laboral</a></li>
+            
+        </ul>
+
+    <div class="card bordeCard" id="perfil">
+            <div class="card-header pb-0" style="background-color: white; width: 96.5%; margin: auto;border-bottom: none;">
+                    <span class="title" >
+                        Mi Perfil
+                    </span>
+            </div>
+        <div class="card-body pt-0 contenedorPrincipalPerfil">
+            <div class="row m-0 p-1 col-12">
+                <hr>
+                <div class="text_small col-12 p-1"><h1 class="tituloFormulario">Te invitamos a actualizar tu perfil</h1></div>
+                <!---->
+                <div class="col-12  contImgPerfil" style="background-image: url('${pathRecursos}/salud/perfilmedico/usuario.png'); background-position: center center; background-repeat: no-repeat;">
+                    
+                    <i class="fas fa-user mt-4" style="font-size: 100px; margin-left: 42%;"></i>
+                </div>
+                <div class="row" style="width: 100%;">
+                     
+                    
+                    <button class="btn btn-primary btn-sm mt-2 borderButton" style="margin-left: 40%;" id="idBtnFile1">Actualizar foto</button>
+                    <input type="file" class="d-none" id="idInputCambiaFotoPerfil">
+                    
+                </div>
+                
+                <!---->
+                <div class="p1 form">
+                 
+                    <div class="row col-12 m-0 p-1 text_small mt-2"  >
+                        <strong>Nombre</strong>
+                    </div>
+                    <div class="row col-12 m-0 p-1">
+                        <input type="text" class="form-control" id="nombrePerfil" placeholder="Nombre" autocomplete="off">
+                    </div>                            
+                    <div class="row col-12 m-0 p-1 text_small mt-2">
+                        <strong>Apellido Paterno</strong>
+                    </div>
+                    <div class="row col-12 m-0 p-1">
+                        <input type="text" class="form-control" id="apellidoPaternoPerfil" placeholder="Apellido Paterno" autocomplete="off">
+                    </div>
+                    <div class="row col-12 m-0 p-1 text_small mt-2">
+                        <strong>Apellido Materno</strong>
+                    </div>
+                    <div class="row col-12 m-0 p-1">
+                        <input type="text" class="form-control" id="apellidoMaternoPerfil" placeholder="Apellido Materno" autocomplete="off">
+                    </div>
+                    <div class="row col-12 m-0 p-1 text_small mt-2">
+                        <strong>Teléfono</strong>
+                    </div>
+                    <div class="row col-12 m-0 p-1">
+                        <input type="number" class="form-control" id="telefonoPerfil" placeholder="Teléfono" autocomplete="off">
+                    </div>
+                    <div class="row col-12 m-0 p-1 text_small mt-2">
+                        <strong>Dirección</strong>
+                    </div>
+                    <div class="row col-12 m-0 p-1">
+                        <input type="text" class="form-control" id="direccionPerfil" placeholder="Dirección" autocomplete="off">
+                    </div>
+                    <div class="row col-12 m-0 p-1 text_small mt-2">
+                        <strong>Código postal</strong>
+                    </div>
+                    <div class="row col-12 m-0 p-1">
+                        <input type="text" class="form-control" id="codigoPostalPerfil" placeholder="Código postal" autocomplete="off">
+                    </div>
+                    <div class="row col-12 m-0 p-1 text_small mt-2">
+                        <strong>Localidad de nacimiento</strong>
+                    </div>
+                    <div class="row col-12 m-0 p-1">
+                        <input type="text" class="form-control" id="localidadDeNacimientoPerfil" placeholder="Localidad de nacimiento" autocomplete="off">
+                    </div>
+                    <div class="row col-12 m-0 p-1 text_small mt-2">
+                        <strong>Municipio de nacimiento</strong>
+                    </div>
+                    <div class="row col-12 m-0 p-1">
+                        <input type="text" class="form-control" id="municipioDeNacimientoPerfil" placeholder="Municipio de nacimiento" autocomplete="off">
+                    </div>
+                    <div class="row col-12 m-0 p-1 text_small mt-2">
+                        <strong>Entidad de nacimiento</strong>
+                    </div>
+                    <div class="row col-12 m-0 p-1">
+                        <input type="text" class="form-control" id="entidadDeNacimientoPerfil" placeholder="Entidad de nacimiento:" autocomplete="off">
+                    </div>
+                    <div class="row col-12 m-0 p-1 text_small mt-2">
+                        <strong>Fecha de nacimiento</strong>
+                    </div>
+                    <div class="row col-12 m-0 p-1">
+                        <input type="date" class="form-control" id="fecha_nacimiento" placeholder="Seleccione una fecha">
+                    </div>
+                    <div class="row col-12 m-0 p-1 text_small mt-2">
+                        <strong>Sexo</strong>
+                    </div>
+                    <div class="row col-12 m-0 p-1">
+                        <select class="form-control" name="genero" id="genero" placeholder="Seleccione un valor" required="">
+                            <option disabled="true" selected="true" value="">Seleccione un valor</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Femenino">Femenino</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        <div class="row">
+            <div class="col" >
+                <input type="button" class="btn btn-outline-danger btn_claro   botonActualizarPassword" style="margin-left: 20%;" value="Actualizar información" id="">
+            </div>
+            <div class="col">
+                 <input type="button" class="btn btn-outline-primary btn_claro botonActualizarPassword" style="margin-left: 20%;" value="Cambiar contraseña" id="idCambiarContrasena" style="border-radius:30px;width:200px">
+            </div>
+
+        <div>
+
+        </div>
+          </div>
+           </div>
+    </div>
+
+    <!--FIN PERFIL-->
+
+    <!--INICIO PERFIL SALUD-->
+    <div class="card" id="perfilSalud">
+        <div class="card-header pb-0" style="background-color: white; width: 96.5%; margin: auto;border-bottom: none;">
+            <span class="title">
+                Mi Perfil Salud
+            </span>
+        </div>
+        <div class="card-body pt-0 contenedorPrincipalPerfilDeSalud">
+            <div class="row m-0 p-1 col-12">
+                <hr>
+                <div class="text_small col-12 p-1">Te invitamos a actualizar tu perfil de salud</div>
+                <div class="p1 form">
+                    <div class="row col-12 m-0 p-1 text_small mt-2">
+                        <strong>Nombre del contacto</strong>
+                    </div>
+                    <div class="row col-12 m-0 p-1">
+                        <input type="text" class="form-control" id="contactoNombrePerfilSalud" placeholder="Nombre del contacto" autocomplete="off">
+                    </div>
+                    <div class="row col-12 m-0 p-1 text_small mt-2">
+                        <strong>Telefono del contacto</strong>
+                    </div>
+                    <div class="row col-12 m-0 p-1">
+                        <input type="text" class="form-control" id="contactoTelefonoPerfilSalud" placeholder="Contacto telefono" autocomplete="off">
+                    </div>
+                    <div class="row col-12 m-0 p-1 text_small mt-2">
+                        <strong>Alergias</strong>
+                    </div>
+                    <div class="row col-12 m-0 p-1">
+                        <input type="text" class="form-control" id="alergiasPerfilSalud" placeholder="Alergias" autocomplete="off">
+                    </div>
+                    <div class="row col-12 m-0 p-1 text_small mt-2">
+                        <strong>Rh</strong>
+                    </div>
+                    <div class="row col-12 m-0 p-1">
+                        <input type="text" class="form-control" id="rhPerfilSalud" placeholder="Rh" autocomplete="off">
+                    </div>
+                    <div class="row col-12 m-0 p-1 text_small mt-2">
+                        <strong>Medicamento</strong>
+                    </div>
+                    <div class="row col-12 m-0 p-1">
+                        <input type="text" class="form-control" id="medicamentoPerfilSalud" placeholder="Medicamento" autocomplete="off">
+                    </div>
+                    <div class="row col-12 m-0 p-1 text_small mt-2">
+                        <strong>Estatura</strong>
+                    </div>
+                    <div class="row col-12 m-0 p-1">
+                        <input type="text" class="form-control" id="estaturaPerfilSalud" placeholder="Estatura" autocomplete="off">
+                    </div>
+                    <div class="row col-12 m-0 p-1 text_small mt-2">
+                        <strong>Medida de cintura</strong>
+                    </div>
+                     <!-------------------->
+                     <div class="form-group row col-12 m-0 p-1 d-flex align-items-center justify-content-center">
+                        <label class="col-md-9 col-form-label d-flex align-items-center justify-content-start" for="cancerPerfilSalud">Cancer:</label>
+                        <div class="col-md-3 d-flex align-items-center justify-content-center">
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <div class="custom-control custom-switch">
+                                    <input id="cancerPerfilSalud" style="padding: 10px 25px !important; border-radius: 30px;" value="" class="form-control custom-control-input" type="checkbox" data-name="cancerPerfilSalud" name="cancerPerfilSalud">
+                                    <label class="custom-control-label" for="cancerPerfilSalud"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row col-12 m-0 p-1 d-flex align-items-center justify-content-center">
+                        <label class="col-md-9 col-form-label d-flex align-items-center justify-content-start" for="enfermedadCorazonPerfilSalud">Enfermo del corazón:</label>
+                        <div class="col-md-3 d-flex align-items-center justify-content-center">
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <div class="custom-control custom-switch">
+                                    <input id="enfermedadCorazonPerfilSalud" style="padding: 10px 25px !important; border-radius: 30px;" value="" class="form-control custom-control-input" type="checkbox" data-name="enfermedadCorazonPerfilSalud" name="enfermedadCorazonPerfilSalud">
+                                    <label class="custom-control-label" for="enfermedadCorazonPerfilSalud"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row col-12 m-0 p-1 d-flex align-items-center justify-content-center">
+                        <label class="col-md-9 col-form-label d-flex align-items-center justify-content-start" for="enfermedadRenalPerfilSalud">Enfermedad renal:</label>
+                        <div class="col-md-3 d-flex align-items-center justify-content-center">
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <div class="custom-control custom-switch">
+                                    <input id="enfermedadRenalPerfilSalud" style="padding: 10px 25px !important; border-radius: 30px;" value="" class="form-control custom-control-input" type="checkbox" data-name="enfermedadRenalPerfilSalud" name="enfermedadRenalPerfilSalud">
+                                    <label class="custom-control-label" for="enfermedadRenalPerfilSalud"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row col-12 m-0 p-1 d-flex align-items-center justify-content-center">
+                        <label class="col-md-9 col-form-label d-flex align-items-center justify-content-start" for="inmunopresionPerfilSalud">Inmunopresión:</label>
+                        <div class="col-md-3 d-flex align-items-center justify-content-center">
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <div class="custom-control custom-switch">
+                                    <input id="inmunopresionPerfilSalud" style="padding: 10px 25px !important; border-radius: 30px;" value="" class="form-control custom-control-input" type="checkbox" data-name="inmunopresionPerfilSalud" name="inmunopresionPerfilSalud">
+                                    <label class="custom-control-label" for="inmunopresionPerfilSalud"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row col-12 m-0 p-1 d-flex align-items-center justify-content-center">
+                        <label class="col-md-9 col-form-label d-flex align-items-center justify-content-start" for="tabaquismoPerfilSalud">Tabaquismo:</label>
+                        <div class="col-md-3 d-flex align-items-center justify-content-center">
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <div class="custom-control custom-switch">
+                                    <input id="tabaquismoPerfilSalud" style="padding: 10px 25px !important; border-radius: 30px;" value="" class="form-control custom-control-input" type="checkbox" data-name="tabaquismoPerfilSalud" name="tabaquismoPerfilSalud">
+                                    <label class="custom-control-label" for="tabaquismoPerfilSalud"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row col-12 m-0 p-1 d-flex align-items-center justify-content-center">
+                        <label class="col-md-9 col-form-label d-flex align-items-center justify-content-start" for="diabetesPerfilSalud">Diabetes:</label>
+                        <div class="col-md-3 d-flex align-items-center justify-content-center">
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <div class="custom-control custom-switch">
+                                    <input id="diabetesPerfilSalud" style="padding: 10px 25px !important; border-radius: 30px;" value="" class="form-control custom-control-input" type="checkbox" data-name="diabetesPerfilSalud" name="diabetesPerfilSalud">
+                                    <label class="custom-control-label" for="diabetesPerfilSalud"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row col-12 m-0 p-1 d-flex align-items-center justify-content-center">
+                        <label class="col-md-9 col-form-label d-flex align-items-center justify-content-start" for="enfermedadPulmonarPerfilSalud">Enfermedad pulmonar:</label>
+                        <div class="col-md-3 d-flex align-items-center justify-content-center">
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <div class="custom-control custom-switch">
+                                    <input id="enfermedadPulmonarPerfilSalud" style="padding: 10px 25px !important; border-radius: 30px;" value="" class="form-control custom-control-input" type="checkbox" data-name="enfermedadPulmonarPerfilSalud" name="enfermedadPulmonarPerfilSalud">
+                                    <label class="custom-control-label" for="enfermedadPulmonarPerfilSalud"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>            
+                    <div class="form-group row col-12 m-0 p-1 d-flex align-items-center justify-content-center">
+                        <label class="col-md-9 col-form-label d-flex align-items-center justify-content-start" for="hipertensionPerfilSalud">Hipertensión:</label>
+                        <div class="col-md-3 d-flex align-items-center justify-content-center">
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <div class="custom-control custom-switch">
+                                    <input id="hipertensionPerfilSalud" style="padding: 10px 25px !important; border-radius: 30px;" value="" class="form-control custom-control-input" type="checkbox" data-name="hipertensionPerfilSalud" name="hipertensionPerfilSalud">
+                                    <label class="custom-control-label" for="hipertensionPerfilSalud"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row col-12 m-0 p-1 d-flex align-items-center justify-content-center">
+                        <label class="col-md-9 col-form-label d-flex align-items-center justify-content-start" for="obesidadPerfilSalud">Obesidad:</label>
+                        <div class="col-md-3 d-flex align-items-center justify-content-center">
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <div class="custom-control custom-switch">
+                                    <input id="obesidadPerfilSalud" style="padding: 10px 25px !important; border-radius: 30px;" value="" class="form-control custom-control-input" type="checkbox" data-name="obesidadPerfilSalud" name="obesidadPerfilSalud">
+                                    <label class="custom-control-label" for="obesidadPerfilSalud"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>            
+                    <div class="form-group row col-12 m-0 p-1 d-flex align-items-center justify-content-center">
+                        <label class="col-md-9 col-form-label d-flex align-items-center justify-content-start" for="embarazadaPerfilSalud">Embarazada:</label>
+                        <div class="col-md-3 d-flex align-items-center justify-content-center">
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <div class="custom-control custom-switch">
+                                    <input id="embarazadaPerfilSalud" style="padding: 10px 25px !important; border-radius: 30px;" value="" class="form-control custom-control-input" type="checkbox" data-name="embarazadaPerfilSalud" name="embarazadaPerfilSalud">
+                                    <label class="custom-control-label" for="embarazadaPerfilSalud"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row col-12 m-0 p-1 d-flex align-items-center justify-content-center">
+                        <label class="col-md-9 col-form-label d-flex align-items-center justify-content-start" for="donadorOrganosPerfilSalud">Donador de organos:</label>
+                        <div class="col-md-3 d-flex align-items-center justify-content-center">
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <div class="custom-control custom-switch">
+                                    <input id="donadorOrganosPerfilSalud" style="padding: 10px 25px !important; border-radius: 30px;" value="" class="form-control custom-control-input" type="checkbox" data-name="donadorOrganosPerfilSalud" name="donadorOrganosPerfilSalud">
+                                    <label class="custom-control-label" for="donadorOrganosPerfilSalud"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row col-12 m-0 p-1 d-flex align-items-center justify-content-center">
+                        <label class="col-md-9 col-form-label d-flex align-items-center justify-content-start" for="padecimientosMedicosPerfilSalud">Padecimientos medicos:</label>
+                        <div class="col-md-3 d-flex align-items-center justify-content-center">
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <div class="custom-control custom-switch">
+                                    <input id="padecimientosMedicosPerfilSalud" style="padding: 10px 25px !important; border-radius: 30px;" value="" class="form-control custom-control-input" type="checkbox" data-name="padecimientosMedicosPerfilSalud" name="padecimientosMedicosPerfilSalud">
+                                    <label class="custom-control-label" for="padecimientosMedicosPerfilSalud"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row col-12 m-0 p-1 d-flex align-items-center justify-content-center">
+                        <label class="col-md-9 col-form-label d-flex align-items-center justify-content-start" for="ningunaPerfilSalud">Ninguna</label>
+                        <div class="col-md-3 d-flex align-items-center justify-content-center">
+                            <div style="display: flex; justify-content: center; align-items: center;">
+                                <div class="custom-control custom-switch">
+                                    <input id="ningunaPerfilSalud" style="padding: 10px 25px !important; border-radius: 30px;" value="" class="form-control custom-control-input" type="checkbox" data-name="ningunaPerfilSalud" name="ningunaPerfilSalud">
+                                    <label class="custom-control-label" for="ningunaPerfilSalud"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+          <!--------------------->
+                  
+                     
+                </div>
+            </div>
+
+            <div class="row"  >
+                <input type="button" class="btn btn-outline-danger btn_claro mx-auto borderButton" style="width: 40%;" value="Actualizar información" id="update_info_horario_empleadoPerfilSalud">
+            <div>
+
+            </div></div></div>
+    </div>
+
+    <!--FIN PERFIL SALUD-->
+
+    <!--INICIO PERFIL LABORAL-->
+    <div class="card" id="perfilLaboral">
+        <div class="card-header pb-0" style="background-color: white; width: 96.5%; margin: auto;border-bottom: none;">
+            <span class="title">
+                Mi Perfil Laboral
+            </span>
+        </div>
+        <div class="card-body pt-0 contenedorPrincipalPerfilLaboral">
+            <div class="row m-0 p-1 col-12">
+                <hr>
+                <div class="text_small col-12 p-1"><h1 class="tituloFormulario">Te invitamos a actualizar tu perfil laboral</h1></div>
+                <div class="p1 form">
+                      <!---->
+                      <div class="row col-12 justify-content-center" >
+                        <div class="col-12  col-md-4 p-0 align-items-center justify-content-center contImgPerfil" style="background-image: url(&quot;https://lineamientos.s3.amazonaws.com/fotosPerfil/57527/255_109686000_957313041360466_1946439240634390139_n.jpg&quot;); background-size: contain; background-position: center center; background-repeat: no-repeat;">
+                        </div>
+
+                        <div class="row mt-5" >
+                            <div class="col-12" >
+                                <button class="btn btn-primary mt-1 borderButton" id="buttonCambiaFotoPerfil" style="margin-left: 35%;">Actualizar foto</button>
+                                <input type="file" class="d-none" id="inputCambiaFotoPerfil">
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="row col-12 m-0 p-1 text_small mt-2">
+                        <strong>Empresa</strong>
+                    </div>
+                    <div class="row col-12 m-0 p-1">
+                        <input type="text" class="form-control" id="nombre_empresaPerfilLaboral" placeholder="Empresa" readonly="">
+                    </div>
+                    <div class="row col-12 m-0 p-1 text_small mt-2">
+                        <strong>Sucursal</strong>
+                    </div>
+                    <div class="row col-12 m-0 p-1">
+                        <input type="text" class="form-control" id="nombre_sucursalPerfilLaboral" placeholder="Sucursal" readonly="">
+                    </div>
+                    <div class="row col-12 m-0 p-1 text_small mt-2">
+                        <strong>Área</strong>
+                    </div>
+                    <div class="row col-12 m-0 p-1">
+                        <input type="text" class="form-control" id="nombre_areaPerfilLaboral" placeholder="Área" readonly="">
+                    </div>
+                    <div class="row col-12 m-0 p-1 text_small mt-2">
+                        <strong>Puesto</strong>
+                    </div>
+                    <div class="row col-12 m-0 p-1">
+                        <input type="text" class="form-control" id="puestoPerfilLaboral" placeholder="Puesto" readonly="">
+                    </div>
+                    <div class="row col-12 m-0 p-1 text_small mt-2">
+                        <strong>Número de empleado</strong>
+                    </div>
+                    <div class="row col-12 m-0 p-1">
+                        <input type="text" class="form-control" id="num_empleadoPerfilLaboral" placeholder="Número de empleado" readonly="">
+                    </div>
+                    <!-- HORA COMIDA-->
+                    <div class="row col-12 m-0 p-1 text_small mt-2">
+                        <strong>¿Cuenta con hora de comida?</strong>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="checkBoxSiPerfilLaboral">
+                        <label class="form-check-label" for="flexRadioDefault1">Sí</label>
+                    </div>
+                      <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="checkBoxNoPerfilLaboral" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">No</label>
+                      </div>
+                      <!--Contenedor Hora comida-->
+                      <div class="row contenedorHoraComida" id="contenedorHoraComidaPerfilLaboral">
+                        <div class="row col-12 m-0 p-1 text_small mt-2">
+                            <strong>Inicio hora de comida</strong>
+                        </div>
+                        <div class="row col-12 m-0 p-1">
+                            <input type="time" class="form-control" id="horario_entradaPerfilLaboral" placeholder="Entrada" autocomplete="none">
+                        </div>
+                        <div class="row col-12 m-0 p-1 text_small mt-2">
+                            <strong>Fin hora de comida</strong>
+                        </div>
+                        <div class="row col-12 m-0 p-1">
+                            <input type="time" class="form-control" id="horario_salidaPerfilLaboral" placeholder="Salida" autocomplete="none">
+                        </div>
+                     </div>
+                    <!---->
+
+
+
+                    <div class="text_small col-12 p-1">Te invitamos a actualizar tu horario laboral</div>
+                    <div class="row col-12 m-0 p-1 text_small mt-2">
+                        <strong>Entrada</strong>
+                    </div>
+                    <div class="row col-12 m-0 p-1">
+                        <input type="time" class="form-control" id="horario_entradaPerfilLaboral" placeholder="Entrada">
+                    </div>
+                    <div class="row col-12 m-0 p-1 text_small mt-2">
+                        <strong>Salida</strong>
+                    </div>
+                    <div class="row col-12 m-0 p-1">
+                        <input type="time" class="form-control" id="horario_salidaPerfilLaboral" placeholder="Salida">
+                    </div>
+                    <div class="text_small col-12 p-1 mt-2">Te invitamos a actualizar los dias de tu semana laboral</div>
+                    <div class="row col-12 m-0 p-1 text_small mt-2 mb-2">
+                        <strong>Seleccione los dias de la semana que tiene que laborar.</strong>
+                    </div>
+                    <div class="col-12 m-0 p-1 mb-5">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="lunesPerfilLaboral" value="2">
+                            <label class="form-check-label" for="lunesPerfilLaboral">Lunes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="martesPerfilLaboral" value="3">
+                            <label class="form-check-label" for="martesPerfilLaboral">Martes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="miercolesPerfilLaboral" value="4">
+                            <label class="form-check-label" for="miercolesPerfilLaboral">Miercoles</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="juevesPerfilLaboral" value="5">
+                            <label class="form-check-label" for="juevesPerfilLaboral">Jueves</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="viernesPerfilLaboral" value="6">
+                            <label class="form-check-label" for="viernesPerfilLaboral">Viernes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="sabadoPerfilLaboral" value="7">
+                            <label class="form-check-label" for="sabadoPerfilLaboral">Sabado</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="domingoPerfilLaboral" value="1">
+                            <label class="form-check-label" for="domingoPerfilLaboral">Domingo</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row"> 
+                <input type="button" class="btn btn-outline-danger btn_claro borderButton" style="margin: auto; width: 40%;" value="Actualizar información" id="update_info_horario_empleadoPerfilLaboral">
+            <div>
+
+            </div>
+           </div>
+        </div>
+    </div>
+    <!--FIN PERFIL LABORAL-->
+    
+    
+
+</div>
+
+<div style="height: 20px;">
+</div>
+
+
+
+
+ 
+
+
+
+ 
+    <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="codigo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+    <script>
+         $( function() {
+            $( "#tabs" ).tabs();
+        } );
+        
+       
+        $("#idBtnFile1").click(() => {
+        $("#idInputCambiaFotoPerfil").click();
+        });
+     ////MODAL
+     const contenedorCambiarPassword = $("<div></div>");
+    let formCambiarPassword = $("<form></form>");
+    formCambiarPassword.attr("id", "formCambiarPassword");
+    formCambiarPassword.attr("autocomplete", "off");
+    let formGroupCambiarPassword = $("<div></div>").addClass("form-group");
+    let labelPasswordActual = $("<label></label>");
+    labelPasswordActual.text("Contraseña Actual");
+    labelPasswordActual.attr("for", "inputPasswordActual");
+    let inputPasswordActual = $("<input>").addClass("form-control");
+    inputPasswordActual.attr("id", "inputPasswordActual");
+    inputPasswordActual.attr("name", "inputPasswordActual");
+    inputPasswordActual.attr("type", "password");
+    inputPasswordActual.attr("required", "true");
+    formGroupCambiarPassword.append(labelPasswordActual);
+    formGroupCambiarPassword.append(inputPasswordActual);
+    formGroupCambiarPassword.append("<br>");
+    let labelNuevoPassword = $("<label></label>");
+    labelNuevoPassword.text("Nueva contraseña");
+    labelNuevoPassword.attr("for", "inputNuevoPassword");
+    formCambiarPassword.append(formGroupCambiarPassword);
+    let inputNuevoPassword = $("<input>").addClass("form-control");
+    inputNuevoPassword.attr("id", "inputNuevoPassword");
+    inputNuevoPassword.attr("name", "inputNuevoPassword");
+    inputNuevoPassword.attr("type", "password");
+    inputNuevoPassword.attr("required", "true");
+    formGroupCambiarPassword.append(labelNuevoPassword);
+    formGroupCambiarPassword.append(inputNuevoPassword);
+    formGroupCambiarPassword.append("<br>");
+    let labelConfirmarPassword = $("<label></label>");
+    labelConfirmarPassword.text("Confirmar nueva contraseña");
+    labelConfirmarPassword.attr("for", "inputConfirmarPassword");
+    formCambiarPassword.append(formGroupCambiarPassword);
+    let inputConfirmarPassword = $("<input>").addClass("form-control");
+    inputConfirmarPassword.attr("id", "inputConfirmarPassword");
+    inputConfirmarPassword.attr("name", "inputConfirmarPassword");
+    inputConfirmarPassword.attr("type", "password");
+    inputConfirmarPassword.attr("required", "true");
+    formGroupCambiarPassword.append(labelConfirmarPassword);
+    formGroupCambiarPassword.append(inputConfirmarPassword);
+    let buttonSubmitCambiarPassword = $("<button></button>").addClass("btn btn-danger btn-block mt-4");
+    buttonSubmitCambiarPassword.attr("type", "submit");
+    buttonSubmitCambiarPassword.text("Cambiar contraseña");
+    formGroupCambiarPassword.append(buttonSubmitCambiarPassword);
+
+    contenedorCambiarPassword.append(formCambiarPassword);
+
+    const alertCambiarPassword = () => {
+        Swal.fire({
+            html: contenedorCambiarPassword,
+            showCancelButton: true,
+            showConfirmButton: false,
+            cancelButtonText: 'Cancelar',
+            allowOutsideClick: false,
+            allowEscapeKey: false
+        });
+        $.validator.addMethod("anNumber", function (value, element) {
+            return this.optional(element) || /\d/.test(value);
+        }, "La contraseña debe contener al menos un numero");
+        $("#formCambiarPassword").validate({
+            rules: {
+                inputPasswordActual: {
+                    required: true
+                },
+                inputNuevoPassword: {
+                    required: true,
+                    minlength: 6,
+                    anNumber: true
+                },
+                inputConfirmarPassword: {
+                    required: true,
+                    minlength: 6,
+                    equalTo: "#inputNuevoPassword",
+                    anNumber: true
+                }
+            },
+            messages: {
+                inputPasswordActual: "Este campo no puede ir vacio.",
+                inputNuevoPassword: {
+                    required: "Este campo no puede ir vacio.",
+                    minlength: "la contraseña debe tener al menos 6 caracteres.",
+                    anNumber: "La contraseña debe contener al menos un numero"
+                },
+                inputConfirmarPassword: {
+                    required: "Este campo no puede ir vacio.",
+                    minlength: "la contraseña debe tener al menos 6 caracteres.",
+                    equalTo: "Las contraseñas no coinciden.",
+                    anNumber: "La contraseña debe contener al menos un numero"
+                }
+            },
+            submitHandler: function () {
+                const passwordActual = $("#inputPasswordActual").val().trim();
+                const nuevoPassword = $("#inputNuevoPassword").val().trim();
+                const confirmarPassword = $("#inputConfirmarPassword").val().trim();
+                const jsonPasswordEmpleado = {
+                    "id360": perfil_usuario.id360,
+                    "passwordActual": passwordActual,
+                    "nuevoPassword": nuevoPassword,
+                    "confirmarPassword": confirmarPassword
+                };
+                //console.log(jsonPasswordEmpleado);
+                /*muestraSpinPerfil();
+                RequestPOST("/API/empresas360/modifica_password_empleado", jsonPasswordEmpleado).then((response) => {
+                    ocultaSpinPerfil();
+
+                    if (response.success) {
+
+                        swal.fire({
+                            "title": "Contraseña actualizada exitosamente",
+                            "text": "Es necesario cerrar tu sesión en todas las plataformas para confirmar el cambio de contraseña"
+                        }).then(r => {
+                            deleteCookieGlobal()("username_v3.3_" + DEPENDENCIA);
+                        });
+
+                    } else {
+                        swal.fire({
+                            text: response.mensaje
+                        });
+                    }
+
+                });*/
+            }
+        });
+    };
+    $("#idCambiarContrasena").click(() => {
+        alertCambiarPassword();
+    });           
+    const validarCheckboxNinguno = () => {
+            $("input[type=checkbox]").on("change", (e) => {
+                $('input:checkbox[name=colorfavorito]:checked').val();
+                if (e.target.checked) {
+                    if (e.target.id !== "ningunaPerfilSalud") {
+                        $("#ningunaPerfilSalud").prop('checked', false);
+                    } else {
+                        $("input[type=checkbox]").prop('checked', false);
+                        $("#ningunaPerfilSalud").prop('checked', true);
+                    }
+                }
+            });
+        };
+        validarCheckboxNinguno();
+
+
+
+        showContenedorHoraComida("checkBoxSiPerfilLaboral");
+
+    </script>
+</body>
+</html>

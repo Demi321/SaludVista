@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+ 
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css"/>
+    <link rel="stylesheet" type="text/css" href="design.css">
+
+    <script src="https://kit.fontawesome.com/741e202e01.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+        <i class="fas fa-file-pdf" style="font-size: 50px;color: rgb(252, 95, 95);margin-left: 90%;cursor: pointer;margin-top: 10px;position: fixed;z-index: 1;" onclick="pdf()"></i>
+ 
+
+
+    <div class="card" id="perfilLaboral">
+        <div class="card-header pb-0" style="background-color: white; width: 96.5%; margin: auto;border-bottom: none;">
+            <span class="title">
+                Mi Perfil Laboral
+            </span>
+        </div>
+        <div class="card-body pt-0 contenedorPrincipalPerfilLaboral">
+            <div class="row m-0 p-1 col-12">
+                <hr>
+
+            </div>
+
+
+            <div class="p1 form" style="width: 100%;">
+
+                <div class="row col-12 m-0 p-1 text_small mt-2">
+                    <strong>Hospital</strong>
+                </div>
+                <div class="row col-12 m-0 p-1">
+                    <input type="text" class="form-control" id="nombre_empresaPerfilLaboral" placeholder="Hospital" readonly="" autocomplete="none">
+                </div>
+
+                <div class="row col-12 m-0 p-1 text_small mt-2">
+                    <strong>Puesto</strong>
+                </div>
+                <div class="row col-12 m-0 p-1">
+                    <input type="text" class="form-control" id="puestoPerfilLaboral" placeholder="Puesto" readonly="" autocomplete="none">
+                </div>
+                <div class="row col-12 m-0 p-1 text_small mt-2">
+                    <strong>Número de empleado</strong>
+                </div>
+                <div class="row col-12 m-0 p-1">
+                    <input type="text" class="form-control" id="num_empleadoPerfilLaboral" placeholder="Número de empleado" readonly="" autocomplete="none">
+                </div>
+                <!---->
+                <div class="row col-12 m-0 p-1 text_small mt-2">
+                    <strong>Teléfono consultorio</strong>
+                </div>
+                <div class="row col-12 m-0 p-1">
+                    <input type="number" class="form-control" id="telefonoConsultorioPerfilLaboral" placeholder="Teléfono consultorio" autocomplete="none">
+                </div>
+
+                <div class="row col-12 m-0 p-1 text_small mt-2">
+                    <strong>Cédula profesional</strong>
+                </div>
+                <div class="row col-12 m-0 p-1">
+                    <input type="text" class="form-control" id="cedulaProfesionalPerfilLaboral" placeholder="Cédula profesional" autocomplete="none">
+                </div>
+
+                <div class="row col-12 m-0 p-1 text_small mt-2">
+                    <strong>Especialidad</strong>
+                </div>
+                <div class="row col-12 m-0 p-1">
+                    <input type="text" class="form-control" id="especialidadPerfilLaboral" placeholder="Especialidad" autocomplete="none">
+                </div>
+
+                <div class="row col-12 m-0 p-1 text_small mt-2">
+                    <strong>Descripción del Médico</strong>
+                </div>
+                <div class="row col-12 m-0 p-1">
+                    <input type="text" class="form-control" id="descripcionMedicoPerfilLaboral" placeholder="Descripción del Médico" autocomplete="none">
+                </div>
+
+                <!---->
+
+                <div class="text_small col-12 p-1">Te invitamos a actualizar tu horario laboral</div>
+                <div class="row col-12 m-0 p-1 text_small mt-2">
+                    <strong>Entrada</strong>
+                </div>
+                <div class="row col-12 m-0 p-1">
+                    <input type="time" class="form-control" id="horario_entradaPerfilLaboral" placeholder="Entrada" autocomplete="none">
+                </div>
+                <div class="row col-12 m-0 p-1 text_small mt-2">
+                    <strong>Salida</strong>
+                </div>
+                <div class="row col-12 m-0 p-1">
+                    <input type="time" class="form-control" id="horario_salidaPerfilLaboral" placeholder="Salida" autocomplete="none">
+                </div>
+                
+                     <!-- HORA COMIDA-->
+                <div class="row col-12 m-0 p-1 text_small mt-2">
+                    <strong>¿Cuenta con hora de comida?</strong>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="checkBoxSiPerfilLaboral">
+                    <label class="form-check-label" for="flexRadioDefault1">Sí</label>
+                </div>
+                  <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="checkBoxNoPerfilLaboral" checked>
+                        <label class="form-check-label" for="flexRadioDefault2">No</label>
+                  </div>
+                  <!--Contenedor Hora comida-->
+                  <div class="row contenedorHoraComida" id="contenedorHoraComidaPerfilLaboral">
+                    <div class="row col-12 m-0 p-1 text_small mt-2">
+                        <strong>Inicio hora de comida</strong>
+                    </div>
+                    <div class="row col-12 m-0 p-1">
+                        <input type="time" class="form-control" id="horario_entradaPerfilLaboral" placeholder="Entrada" autocomplete="none">
+                    </div>
+                    <div class="row col-12 m-0 p-1 text_small mt-2">
+                        <strong>Fin hora de comida</strong>
+                    </div>
+                    <div class="row col-12 m-0 p-1">
+                        <input type="time" class="form-control" id="horario_salidaPerfilLaboral" placeholder="Salida" autocomplete="none">
+                    </div>
+                 </div>
+                <!---->
+
+
+                <div class="text_small col-12 p-1 mt-2">Te invitamos a actualizar los dias de tu semana laboral</div>
+                <div class="row col-12 m-0 p-1 text_small mt-2 mb-2">
+                    <strong>Seleccione los dias de la semana que tiene que laborar.</strong>
+                </div>
+                <div class="col-12 m-0 p-1 mb-5">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="lunesPerfilLaboral" value="2" autocomplete="none">
+                        <label class="form-check-label" for="lunesPerfilLaboral">Lunes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="martesPerfilLaboral" value="3" autocomplete="none">
+                        <label class="form-check-label" for="martesPerfilLaboral">Martes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="miercolesPerfilLaboral" value="4" autocomplete="none">
+                        <label class="form-check-label" for="miercolesPerfilLaboral">Miercoles</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="juevesPerfilLaboral" value="5" autocomplete="none">
+                        <label class="form-check-label" for="juevesPerfilLaboral">Jueves</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="viernesPerfilLaboral" value="6" autocomplete="none">
+                        <label class="form-check-label" for="viernesPerfilLaboral">Viernes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="sabadoPerfilLaboral" value="7" autocomplete="none">
+                        <label class="form-check-label" for="sabadoPerfilLaboral">Sabado</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="domingoPerfilLaboral" value="1" autocomplete="none">
+                        <label class="form-check-label" for="domingoPerfilLaboral">Domingo</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="arriba.png" width="50px">
+        <div class="row"> 
+            <input type="button" class="btn btn-outline-danger btn_claro borderButton btnActualizarInfo"  value="Actualizar información" id="update_info_horario_empleadoPerfilLaboral">
+            <div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="card">
+    <button type="button" class="btn btn-danger" style="width: 10%;">PROBANDO PDF</button>
+
+</div>
+<!--FIN PERFIL LABORAL-->
+
+
+
+
+
+
+
+<div class="row" style="display: flex;justify-content: center;border: 1px solid red; width: 300px;height: 300px;">
+     
+</div>
+
+
+
+
+ 
+ 
+
+
+<!-- #region -->
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    .borde{
+        border: 1px solid red;
+    }
+</style>
+
+<div class="borde" id="contenedorPDF" style="display: none;">
+    <input type="text" value="hola">
+    <input type="text" value="hola">
+    <input type="text" value="hola">
+    <input type="text" value="hola">
+    <input type="text" value="hola">
+</div>   
+ 
+<button id="bPdf" onclick="pdf()">PDF</button>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="../recursos/javaScript/JQuery/jquery-3.6.0.min.js"></script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+
+    <script src="codigo.js"></script>
+
+
+<!--**************-->
+    <!--<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>-->
+
+<!--**************-->
+
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.print.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.print.min.js"></script>
+
+   
+    <script type="text/javascript" src="codigo.js"></script>
+    <script type="text/javascript" src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    
+  
+    
+    
+    
+</body>
+</html>

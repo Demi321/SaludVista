@@ -1,0 +1,84 @@
+.contenedorPrincipal{
+    width: 60%;
+ 
+}
+.bordeCard{
+    width: 100%;
+    border:1px solid rgb(180, 180, 180);
+    box-shadow: 3px 3px #e0e0e0;
+ 
+}
+
+.tituloFormulario{
+    font-size: 17px;
+    text-align: center;
+}
+.iconUser{
+    width: 100px;
+    height: 200px;
+}
+.contImgPerfil{
+    width: 25%;
+    height: 150px;
+    margin: auto;
+    border: 1px solid rgb(231, 231, 231);
+}
+.borderButton{
+    width:25%;
+    height: 30px;
+    border-radius: 25px;
+ 
+}
+ 
+.imgUsuario{
+    width: 50%;
+    height: 150px;
+    margin: auto;
+    border: 1px solid rgb(185, 185, 185);
+    border-radius: 7px;
+}
+.botonActualizarPassword{
+    font-size: 10px;
+    width: 50%;
+    margin-left: 25%;
+    height: 35px;
+    border-radius: 25px;
+
+ 
+}
+.fas{
+    color:gray; 
+    font-size: 80px;
+    margin-left: 25%;
+}
+
+/*--------*/
+.contenedorHoraComida{
+    width: 100%;
+    height:auto;
+ 
+    display: none;
+}
+
+/*-----------------------*/
+/*
+@media only screen and (max-width: 1830px) {
+    .contenedorPrincipal{
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 1410px) {
+    .contenedorPrincipal{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .borderButton{
+     width: 70%;
+     
+    }
+    .imgUsuario{
+        width: 70%;
+       
+    }
+}*/
